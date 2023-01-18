@@ -72,5 +72,41 @@ b = a
 b+="aaa"
 print(a,b) """
 
+# ---Tuplas, Diccionarios y Uniones---
+# () Tuplas
+# {} Diccionarios
+# [] Listas
 
+""" lis = [1,2,3,4,5]
+print(type(lis))
+
+tupla = (1,2,3,4,5) # la tupla no se puede alterar
+print(type(tupla))
+print(tupla) """
+#tupla[1] = 5 ERROR
+
+# clave: valor
+""" dic = {"a": 1, "b": 2} #la clave siempre es unica para cada elemento
+print(type(dic))
+print(dic)
+print(dic["a"]) # se indexa por claves
+dic[6] = "hola"
+print(dic) """
+
+#indexa claves
+""" for clave in dic:
+    print(clave) """
+
+#para obtener los valores
+
+#indexar con la clave
+""" for clave in dic.keys():
+    print(dic[clave]) """
+
+#obtinenes los valores con una funcion
+""" for valor in dic.items():
+    print(valor)
+    print(valor[1]) """
+
+# funciones
 
