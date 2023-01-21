@@ -108,5 +108,35 @@ print(dic) """
     print(valor)
     print(valor[1]) """
 
+
+""" a = [1,2,3]
+b = [4,5,6,8]
+print(list(zip(a,b))) """
+
 # funciones
 
+""" def saludo():
+    print("Hola")
+
+saludo()
+saludo()
+saludo()
+saludo() """
+
+def suma():
+    a = 1
+    b= 2
+
+
+suma()
+
+def imprimir(x):
+    print(x)
+
+def resta(a,b):
+    res = a-b
+    return res
+    
+    print("a")
+
+print(resta(1,2))
