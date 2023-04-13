@@ -123,7 +123,7 @@ saludo()
 saludo()
 saludo() """
 
-def suma():
+""" def suma():
     a = 1
     b= 2
 
@@ -140,3 +140,74 @@ def resta(a,b):
     print("a")
 
 print(resta(1,2))
+
+print("as","asf","asdasf") """
+
+# valores por defecto
+""" def division(a,b=1):
+    return a/b
+
+print(division(2))
+print(division(2,3)) """
+
+# desempaqutamiento
+
+""" arr = [1,2,3]
+a,b,c = arr
+print(a,b,c)
+
+#errores
+
+arr = [1,2,3,4]
+a,b,c = arr
+print(a,b,c) 
+
+arr = [1,2,3]
+a,b,c,d = arr
+print(a,b,c)
+
+arr = [1,2,3,4]
+a, b, *c = arr
+print(a,b,c)
+
+arr = [1,2,3,4]
+*a, b, c = arr
+print(a,b,c)
+
+arr = [1,2,3,4]
+a, *b, c = arr
+print(a,b,c)"""
+
+""" def suma(a,*b):
+    for i in b:
+     a+=i
+    print(a)
+
+suma(1,2,3)
+nums = [1,2,3,4,5]
+suma(*nums) """
+
+def algo():
+    return "hola"
+
+def suma(a,b):
+    sum = a+b
+
+def lista():
+    return [1,2,3]
+
+# None != True False "" [] 0
+print( algo() )
+print( suma(1,2) )
+var = algo()
+print(var)
+
+var = lista()
+print(var)
+print(*var)
+a,b,c = lista()
+print(a)
+
+a = 0
+_a = 0
+a123 = 0
