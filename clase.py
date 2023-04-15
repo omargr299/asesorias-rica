@@ -33,7 +33,6 @@ print(arr[0:4])
 print(arr[4:10])
 print(arr[:])
 print(arr[4:9:2])
-
 arrmew = arr[4:8]
 print(arrmew,arr) """
 
@@ -66,7 +65,6 @@ b = a
 c = b.copy()
 b.append(5)
 print(a,b,c)
-
 a = "str"
 b = a
 b+="aaa"
@@ -79,7 +77,6 @@ print(a,b) """
 
 """ lis = [1,2,3,4,5]
 print(type(lis))
-
 tupla = (1,2,3,4,5) # la tupla no se puede alterar
 print(type(tupla))
 print(tupla) """
@@ -117,7 +114,6 @@ print(list(zip(a,b))) """
 
 """ def saludo():
     print("Hola")
-
 saludo()
 saludo()
 saludo()
@@ -126,27 +122,20 @@ saludo() """
 """ def suma():
     a = 1
     b= 2
-
-
 suma()
-
 def imprimir(x):
     print(x)
-
 def resta(a,b):
     res = a-b
     return res
     
     print("a")
-
 print(resta(1,2))
-
 print("as","asf","asdasf") """
 
 # valores por defecto
 """ def division(a,b=1):
     return a/b
-
 print(division(2))
 print(division(2,3)) """
 
@@ -155,25 +144,19 @@ print(division(2,3)) """
 """ arr = [1,2,3]
 a,b,c = arr
 print(a,b,c)
-
 #errores
-
 arr = [1,2,3,4]
 a,b,c = arr
 print(a,b,c) 
-
 arr = [1,2,3]
 a,b,c,d = arr
 print(a,b,c)
-
 arr = [1,2,3,4]
 a, b, *c = arr
 print(a,b,c)
-
 arr = [1,2,3,4]
 *a, b, c = arr
 print(a,b,c)
-
 arr = [1,2,3,4]
 a, *b, c = arr
 print(a,b,c)"""
@@ -182,10 +165,9 @@ print(a,b,c)"""
     for i in b:
      a+=i
     print(a)
-
 suma(1,2,3)
 nums = [1,2,3,4,5]
-suma(*nums) """
+suma(*nums)
 
 def algo():
     return "hola"
@@ -211,3 +193,66 @@ print(a)
 a = 0
 _a = 0
 a123 = 0
+
+# funciones de orden superior
+def funcion():
+    print("hola")
+
+funcion()
+var = funcion()
+print(var)
+var = funcion
+var()
+num = 1
+num = [3]
+num[0]
+
+def funcion2(func):
+    print('soy una funcion de orden superior y hago esto:')
+    func()
+
+funcion2(funcion)"""
+
+
+class EmpleadoAccenture:
+    empresa = "Accenture"
+
+    def __init__(self,_id):
+        print('se creo un empleado')
+        self.id = _id
+
+    def __del__(self):
+        print('adios')
+
+    def __add__(self,other):
+        return self.id + other.id
+
+    def saludar(self):
+        print('hola')
+
+    def cambiar_id(self,new_id):
+        self.id = new_id
+
+
+print(EmpleadoAccenture.empresa)
+# assert 1==2
+
+empleado1 = EmpleadoAccenture(1)
+empleado2 = EmpleadoAccenture(2)
+print(empleado1.empresa)
+print(empleado2.empresa)
+# print(EmpleadoAccenture.id)
+print(empleado1.id)
+print(empleado2.id)
+# EmpleadoAccenture.saludar()
+# del empleado2
+empleado1.saludar()
+empleado1.cambiar_id(3)
+print(empleado1.id)
+
+empleado3 = empleado1
+print(empleado3.id)
+
+empleado4 = EmpleadoAccenture(4)
+print(empleado1+empleado2)
+print(empleado1+empleado2+empleado4)
